@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Matheus Oliveira Silva, advogado em Barueri/SP. Direito do trabalho, família, médico e da saúde, consumidor e cível. Plano de saúde que nega cobertura, verbas rescisórias, divórcio, pensão e cobrança indevida. Atendimento presencial em Barueri e online em todo o Brasil. OAB/SP 550.010.">
+<title>Matheus Oliveira Silva — Advocacia em Barueri/SP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  /* ============================================================
+     Matheus Oliveira Silva — Advocacia
+     Paleta B: preto integral
+     Tipografia: Newsreader (títulos) + IBM Plex Sans (texto)
+     ============================================================ */
+
+  :root {
+    color-scheme: dark;
+
+    --bg:        #0E0E0E;
+    --surface:   #1A1A18;
+    --surface-2: #232320;
+    --line:      #2E2E27;
+    --ink:       #EDE9E0;
+    --ink-2:     #ADA79A;
+    --gold:      #C9A227;
+    --gold-lt:   #E0C673;
+    --gold-ink:  #161307;
+
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans:  "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+    --wrap: 60rem;
+    --text: 34rem;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  h1, h2, h3 { font-family: var(--serif); font-weight: 600; margin: 0; text-wrap: balance; }
+  h1 { font-size: clamp(1.9rem, 5.4vw, 3rem); line-height: 1.12; letter-spacing: -.015em; }
+  h2 { font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.2; letter-spacing: -.01em; }
+  h3 { font-size: 1.15rem; line-height: 1.3; }
+  p  { margin: 0; }
+
+  a { color: var(--gold-lt); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { color: var(--gold); }
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 3px;
+  }
+
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding-inline: 20px; }
+  .text { max-width: var(--text); }
+
+  .eyebrow {
+    font-size: .72rem; font-weight: 600; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--gold);
+  }
+
+  /* ---------- logo ----------
+     Reconstrução tipográfica da marca, para o site funcionar sem
+     depender de arquivo de imagem.
+
+     PARA USAR O ARQUIVO REAL: salve o logo como logo-ms.png (ou .svg)
+     na mesma pasta do index.html e troque o bloco <a class="logo"> por:
+
+       <a href="#topo" class="logo"><img src="logo-ms.png"
+          alt="Matheus Oliveira Silva Advocacia" class="logo-img"></a>
+
+     O logo original é a versão completa (monograma + nome + ADVOCACIA).
+     Ela é ótima no rodapé, mas fica ilegível a 42px no topo fixo — por
+     isso o topo usa só o monograma. Se for usar arquivo, peça ao
+     designer uma versão só do quadrado com o MS para o cabeçalho.
+  ------------------------------------------------------------ */
+  .mark {
+    width: 42px; height: 42px; flex: none;
+    border: 1px solid var(--gold);
+    display: grid; place-items: center;
+  }
+  .mark span {
+    font-family: var(--serif); font-weight: 600;
+    font-size: 1.22rem; letter-spacing: .03em; color: var(--gold);
+  }
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    .mark span {
+      background: linear-gradient(155deg, #A8782A 0%, #F2DDA4 42%, #C9922F 78%, #E8C87A 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+  .logo-txt { display: flex; flex-direction: column; gap: 4px; line-height: 1; }
+  .logo-txt .l1 { font-size: .73rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); }
+  .logo-txt .l2 { font-size: .55rem; letter-spacing: .32em; text-transform: uppercase; color: var(--gold); }
+  @media (max-width: 430px) { .logo-txt { display: none; } }
+  .logo-img { height: 42px; width: auto; }
+
+  /* marca completa, para o rodapé */
+  .lockup { display: flex; flex-direction: column; align-items: flex-start; gap: 13px; }
+  .lockup .mark { width: 60px; height: 60px; }
+  .lockup .mark span { font-size: 1.75rem; }
+  .lockup .nome-full {
+    font-size: .95rem; letter-spacing: .21em; text-transform: uppercase; color: #FFFFFF;
+  }
+  .lockup .adv { display: flex; align-items: center; gap: 11px; }
+  .lockup .adv i { display: block; width: 26px; height: 1px; background: var(--gold); }
+  .lockup .adv span { font-size: .6rem; letter-spacing: .34em; text-transform: uppercase; color: var(--gold); }
+
+  /* ---------- topo fixo ---------- */
+  .top {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(14, 14, 14, .93);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .top-in {
+    max-width: var(--wrap); margin: 0 auto; padding: 12px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .nav { display: flex; gap: 22px; align-items: center; }
+  .nav a { color: var(--ink-2); text-decoration: none; font-size: .92rem; }
+  .nav a:hover { color: var(--gold); }
+  @media (max-width: 800px) { .nav { display: none; } }
+
+  /* ---------- botões ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+    min-height: 48px; padding: 0 22px; border-radius: 6px;
+    font-family: var(--sans); font-size: 1rem; font-weight: 600;
+    text-decoration: none; border: 1px solid transparent; cursor: pointer;
+    transition: background .15s ease, color .15s ease;
+  }
+  .btn-gold { background: var(--gold); color: var(--gold-ink); }
+  .btn-gold:hover { background: var(--gold-lt); color: var(--gold-ink); }
+  .btn-ghost { border-color: var(--line); color: var(--ink); }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+  .btn svg { flex: none; }
+
+  /* ---------- hero ---------- */
+  .hero { padding-block: clamp(40px, 8vw, 84px) clamp(36px, 7vw, 72px); }
+  .hero-grid {
+    max-width: var(--wrap); margin: 0 auto; padding-inline: 20px;
+    display: grid; grid-template-columns: 1fr 19rem; gap: 48px; align-items: center;
+  }
+  .hero-in { display: flex; flex-direction: column; gap: 20px; }
+  .hero h1 { max-width: 20ch; }
+
+  /* retrato do topo: só no desktop, para o topo caber numa tela de celular */
+  .hero-foto { position: relative; }
+  .hero-foto img {
+    width: 100%; height: auto; aspect-ratio: 4 / 5;
+    object-fit: cover; object-position: center 22%;
+    border-radius: 10px; border: 1px solid var(--line);
+  }
+  .hero-foto::after {
+    content: ""; position: absolute; inset: 0; border-radius: 10px; pointer-events: none;
+    background: linear-gradient(200deg, rgba(201, 162, 39, .10), transparent 42%);
+  }
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 0; }
+    .hero-foto { display: none; }
+  }
+  .hero .sub { font-size: 1.1rem; color: var(--ink-2); max-width: 38ch; }
+  .hero .where {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: .84rem; letter-spacing: .04em; color: var(--gold);
+    border: 1px solid var(--line); border-radius: 99px; padding: 5px 13px; align-self: flex-start;
+  }
+  .hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+  .hero .oab { font-size: .82rem; color: var(--ink-2); letter-spacing: .03em; }
+
+  /* ---------- seções ---------- */
+  section { padding-block: clamp(44px, 7vw, 80px); border-top: 1px solid var(--line); }
+  .sec-head { display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+  .sec-head p { color: var(--ink-2); max-width: var(--text); }
+
+  /* ---------- áreas ---------- */
+  .areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 16px; }
+  .area {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    padding: 22px 20px; display: flex; flex-direction: column; gap: 14px;
+  }
+  .area h3 { color: var(--gold); }
+  .area ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .area li { font-size: .95rem; color: var(--ink-2); padding-left: 16px; position: relative; }
+  .area li::before {
+    content: ""; position: absolute; left: 0; top: .62em;
+    width: 5px; height: 5px; border-radius: 50%; background: var(--gold);
+  }
+  .area-cta { border-color: rgba(201, 162, 39, .45); justify-content: space-between; }
+  .area-cta p { font-size: .95rem; color: var(--ink-2); }
+  .area-cta .btn { align-self: flex-start; }
+
+  /* ---------- como funciona ---------- */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 20px; counter-reset: st; }
+  .step { display: flex; flex-direction: column; gap: 9px; counter-increment: st; }
+  .step .n {
+    font-family: var(--serif); font-size: 1.9rem; color: var(--gold); line-height: 1;
+  }
+  .step .n::before { content: counter(st, decimal-leading-zero); }
+  .step b { font-size: 1.05rem; font-weight: 600; }
+  .step p { color: var(--ink-2); font-size: .95rem; }
+
+  /* ---------- artigos ---------- */
+  .arts { display: flex; flex-direction: column; gap: 4px; }
+  .art {
+    border-top: 1px solid var(--line); padding-block: 30px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .art:first-child { border-top: none; padding-top: 6px; }
+  .art-tag {
+    align-self: flex-start; font-size: .66rem; font-weight: 600;
+    letter-spacing: .15em; text-transform: uppercase; color: var(--gold);
+    border: 1px solid var(--line); border-radius: 99px; padding: 4px 11px;
+  }
+  .art h3 { font-size: 1.32rem; max-width: 26ch; }
+  .art p, .art li { color: var(--ink-2); max-width: var(--text); font-size: 1rem; }
+  .art ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .art ul li { padding-left: 17px; position: relative; }
+  .art ul li::before {
+    content: ""; position: absolute; left: 0; top: .66em;
+    width: 6px; height: 1px; background: var(--gold);
+  }
+  .art strong { color: var(--ink); font-weight: 600; }
+  .art .lei {
+    font-size: .86rem; color: var(--gold); letter-spacing: .03em;
+    border-left: 2px solid var(--gold); padding-left: 11px;
+  }
+  .art .upd { font-size: .8rem; color: #7C776A; letter-spacing: .04em; }
+
+  /* ---------- sobre ---------- */
+  .sobre { display: grid; grid-template-columns: 15rem 1fr; gap: 32px; align-items: start; }
+  @media (max-width: 720px) { .sobre { grid-template-columns: 1fr; gap: 24px; } }
+  .foto {
+    width: 100%; max-width: 15rem;
+    border-radius: 10px; border: 1px solid var(--line); background: var(--surface);
+    overflow: hidden;
+  }
+  .foto img {
+    width: 100%; height: auto; aspect-ratio: 4 / 5;
+    object-fit: cover; object-position: center 14%;
+  }
+  .sobre-txt { display: flex; flex-direction: column; gap: 14px; max-width: var(--text); }
+  .sobre-txt p { color: var(--ink-2); }
+  .credenciais { display: flex; flex-direction: column; gap: 10px; margin-top: 6px; }
+  .cred { display: grid; grid-template-columns: 8.5rem 1fr; gap: 12px; font-size: .93rem; }
+  @media (max-width: 520px) { .cred { grid-template-columns: 1fr; gap: 2px; } }
+  .cred dt { color: var(--gold); letter-spacing: .04em; font-size: .8rem; text-transform: uppercase; padding-top: .18em; }
+  .cred dd { margin: 0; color: var(--ink); }
+
+  /* ---------- faq ---------- */
+  .faq { display: flex; flex-direction: column; max-width: 44rem; }
+  .faq details { border-top: 1px solid var(--line); }
+  .faq details:last-child { border-bottom: 1px solid var(--line); }
+  .faq summary {
+    list-style: none; cursor: pointer; padding: 17px 36px 17px 0; position: relative;
+    font-weight: 500; font-size: 1.02rem; min-height: 48px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: "+"; position: absolute; right: 6px; top: 15px;
+    font-size: 1.3rem; color: var(--gold); line-height: 1;
+  }
+  .faq details[open] summary::after { content: "−"; }
+  .faq .ans { padding: 0 0 20px; color: var(--ink-2); max-width: var(--text); font-size: .97rem; }
+
+  /* ---------- contato ---------- */
+  .contato { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 18px; }
+  .cbox {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    padding: 20px; display: flex; flex-direction: column; gap: 7px;
+  }
+  .cbox .lbl { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+  .cbox .val { font-size: 1.02rem; color: var(--ink); word-break: break-word; user-select: all; }
+  .cbox .sm { font-size: .88rem; color: var(--ink-2); }
+  .contato-cta { margin-top: 24px; }
+
+  /* ---------- rodapé ---------- */
+  footer {
+    border-top: 1px solid var(--line); background: var(--bg);
+    padding-block: 40px 28px;
+    padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+  }
+  .foot-in { display: flex; flex-direction: column; gap: 22px; }
+  .foot-top { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: flex-start; }
+  .foot-id { display: flex; flex-direction: column; gap: 15px; }
+  .foot-id .oab { font-size: .9rem; color: var(--ink-2); letter-spacing: .06em; }
+  .foot-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  .foot-links a { color: var(--ink-2); text-decoration: none; font-size: .9rem; }
+  .foot-links a:hover { color: var(--gold); }
+  .aviso {
+    font-size: .8rem; color: #78736A; line-height: 1.6; max-width: 46rem;
+    border-top: 1px solid var(--line); padding-top: 18px;
+  }
+
+  /* ---------- barra fixa de WhatsApp (celular) ---------- */
+  .zap-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    background: rgba(14, 14, 14, .96); border-top: 1px solid var(--line);
+    padding: 10px 16px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    display: none;
+  }
+  .zap-bar .btn { width: 100%; }
+  @media (max-width: 800px) {
+    .zap-bar { display: block; }
+    body { padding-bottom: 86px; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Attorney",
+  "name": "Matheus Oliveira Silva — Advocacia",
+  "description": "Advocacia em direito do trabalho, família e cível. Atendimento presencial em Barueri/SP e online em todo o Brasil.",
+  "image": "foto-sobre.jpg",
+  "telephone": "+5511937561549",
+  "email": "oliveirasilvaadv.matheus@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Barueri",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "areaServed": { "@type": "Country", "name": "Brasil" },
+  "knowsAbout": ["Direito do Trabalho", "Direito de Família", "Direito Médico e da Saúde", "Direito do Consumidor", "Direito Civil", "Execução Civil e Trabalhista"],
+  "knowsLanguage": "pt-BR"
+}
+</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="#topo" aria-label="Matheus Oliveira Silva Advocacia — início">
+      <span class="mark" aria-hidden="true"><span>MS</span></span>
+      <span class="logo-txt">
+        <span class="l1">Matheus Oliveira Silva</span>
+        <span class="l2">Advocacia</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#areas">Áreas</a>
+      <a href="#atendimento">Atendimento</a>
+      <a href="#direitos">Seus direitos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- ============ TOPO ============ -->
+  <div class="hero">
+   <div class="hero-grid">
+    <div class="hero-in">
+      <span class="where">Barueri/SP · e online em todo o Brasil</span>
+      <h1>Advocacia trabalhista, de família, saúde e consumidor</h1>
+      <p class="sub">Atendimento direto comigo, do primeiro contato até o fim do processo. Sem intermediário e sem juridiquês.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="https://wa.me/5511937561549?text=Prezado%20Dr.%20Matheus%2C%20cheguei%20at%C3%A9%20o%20senhor%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20atendimento%20para%20tratar%20do%20meu%20caso." target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.2.2-.6.2-1 .1-1.2 0-.1-.2-.2-.4-.3Z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#areas">Ver áreas de atuação</a>
+      </div>
+      <p class="oab">Matheus Oliveira Silva · OAB/SP 550.010</p>
+    </div>
+    <div class="hero-foto">
+      <img src="foto-topo.jpg" alt="Matheus Oliveira Silva no escritório" width="853" height="1280" fetchpriority="high">
+    </div>
+   </div>
+  </div>
+
+  <!-- ============ ÁREAS ============ -->
+  <section id="areas">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Áreas de atuação</span>
+        <h2>Em que eu posso ajudar</h2>
+        <p>Cinco áreas, um público só: pessoa física com um problema concreto para resolver.</p>
+      </div>
+      <div class="areas">
+
+        <article class="area">
+          <h3>Direito do trabalho</h3>
+          <ul>
+            <li>Verbas rescisórias não pagas ou pagas a menos</li>
+            <li>Horas extras, banco de horas e adicional noturno</li>
+            <li>Reconhecimento de vínculo: PJ, informal ou “freela” fixo</li>
+            <li>Descontos indevidos no salário</li>
+            <li>Falta justificada descontada e atestado recusado</li>
+            <li>Assédio moral e rescisão indireta</li>
+            <li>Acidente de trabalho e estabilidade</li>
+            <li>FGTS e seguro-desemprego negados</li>
+          </ul>
+        </article>
+
+        <article class="area">
+          <h3>Direito de família</h3>
+          <ul>
+            <li>Divórcio consensual e litigioso</li>
+            <li>Partilha de bens</li>
+            <li>Pensão alimentícia: fixação, revisão e execução</li>
+            <li>Guarda e regulamentação de convivência</li>
+            <li>União estável: reconhecimento e dissolução</li>
+            <li>Reconhecimento de paternidade</li>
+            <li>Alteração e exclusão de nome</li>
+          </ul>
+        </article>
+
+        <article class="area">
+          <h3>Direito médico e da saúde</h3>
+          <ul>
+            <li>Plano de saúde que nega tratamento, exame ou cirurgia</li>
+            <li>Negativa por carência ou doença preexistente</li>
+            <li>Urgência e emergência recusadas</li>
+            <li>Reajuste abusivo de mensalidade</li>
+            <li>Cancelamento unilateral do plano</li>
+            <li>Descredenciamento de hospital ou médico sem aviso</li>
+            <li>Medicamento de alto custo negado</li>
+            <li>Home care e internação negados</li>
+          </ul>
+        </article>
+
+        <article class="area">
+          <h3>Direito do consumidor</h3>
+          <ul>
+            <li>Cobrança indevida e devolução em dobro</li>
+            <li>Nome negativado sem aviso prévio</li>
+            <li>Compra online: atraso, produto errado, arrependimento</li>
+            <li>Produto com defeito e garantia não cumprida</li>
+            <li>Serviço não prestado ou prestado pela metade</li>
+            <li>Banco, financeira e empréstimo não contratado</li>
+            <li>Companhia aérea: atraso, cancelamento, bagagem</li>
+            <li>Contrato com cláusula abusiva</li>
+          </ul>
+        </article>
+
+        <article class="area">
+          <h3>Direito civil</h3>
+          <ul>
+            <li>Revisão e rescisão de contrato</li>
+            <li>Danos morais e materiais</li>
+            <li>Cobrança de valores devidos a você</li>
+            <li>Execução de título e cumprimento de sentença</li>
+            <li>Conflitos entre vizinhos e de condomínio</li>
+            <li>Acidente de trânsito e reparação de prejuízo</li>
+            <li>Inventário e partilha de herança</li>
+          </ul>
+        </article>
+
+        <article class="area area-cta">
+          <h3>Não achou a sua situação?</h3>
+          <p>A lista não esgota o que eu faço. Me conte o que aconteceu e eu digo com franqueza se é caso para mim, se vale procurar outro profissional ou se realmente não há o que fazer.</p>
+          <a class="btn btn-gold" href="https://wa.me/5511937561549?text=Prezado%20Dr.%20Matheus%2C%20cheguei%20at%C3%A9%20o%20senhor%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20atendimento%20para%20tratar%20do%20meu%20caso." target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.2.2-.6.2-1 .1-1.2 0-.1-.2-.2-.4-.3Z"/></svg>
+            Falar no WhatsApp
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ATENDIMENTO ============ -->
+  <section id="atendimento">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Do primeiro contato à proposta</h2>
+        <p>Ninguém assina nada sem saber o que está contratando. O caminho é sempre este:</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="n"></span>
+          <b>Primeiro contato</b>
+          <p>Você me chama no WhatsApp e conta o que aconteceu, com as suas palavras. Nessa conversa eu já digo se existe caso ou não — e se não existir, eu falo.</p>
+        </div>
+        <div class="step">
+          <span class="n"></span>
+          <b>Análise dos documentos</b>
+          <p>Você envia o que tiver em mãos. Eu analiso e explico os caminhos possíveis, os prazos e os riscos de cada um, sem promessa de resultado.</p>
+        </div>
+        <div class="step">
+          <span class="n"></span>
+          <b>Proposta por escrito</b>
+          <p>Antes de qualquer ato, você recebe a proposta de honorários por escrito. Só começo depois do seu aceite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEUS DIREITOS ============ -->
+  <section id="direitos">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Seus direitos</span>
+        <h2>Coisas que muita gente não sabe</h2>
+        <p>Conteúdo informativo, em linguagem comum. Não substitui a análise do seu caso concreto.</p>
+      </div>
+      <div class="arts">
+
+        <article class="art">
+          <span class="art-tag">Direito do trabalho</span>
+          <h3>Quando a empresa não pode descontar a sua falta</h3>
+          <p>O artigo 473 da CLT lista as ausências que são justificadas por lei. Nelas, o salário <strong>não pode</strong> ser descontado. Entre as principais:</p>
+          <ul>
+            <li>Falecimento de cônjuge, ascendente, descendente, irmão ou dependente econômico — até 2 dias</li>
+            <li>Casamento — até 3 dias</li>
+            <li>Doação voluntária de sangue — 1 dia a cada 12 meses de trabalho</li>
+            <li>Alistamento eleitoral — até 2 dias</li>
+            <li>Prova de vestibular — nos dias de realização</li>
+            <li>Acompanhar a esposa ou companheira em consultas e exames durante a gravidez — até 2 dias</li>
+            <li>Acompanhar filho de até 6 anos em consulta médica — 1 dia por ano</li>
+            <li>Exames preventivos de câncer — até 3 dias por ano</li>
+          </ul>
+          <p>Cada situação tem regra e limite próprios, e algumas exigem comprovação. Se houve desconto numa dessas hipóteses, o valor descontado é devido a você.</p>
+          <p class="lei">Base: art. 473 da CLT.</p>
+          <p class="upd">Atualizado em setembro de 2026</p>
+        </article>
+
+        <article class="art">
+          <span class="art-tag">Direito do trabalho</span>
+          <h3>O patrão pode recusar atestado sem CID?</h3>
+          <p>Não. A Resolução 1.658/2002 do Conselho Federal de Medicina estabelece que a indicação do CID no atestado é <strong>facultativa</strong> e depende de autorização expressa do paciente. O diagnóstico é informação protegida por sigilo médico.</p>
+          <p>A empresa não pode exigir o CID como condição para aceitar o atestado, e o desconto feito com base nessa recusa é indevido.</p>
+          <p>O que a empresa pode exigir é que o atestado esteja completo no que a norma pede: identificação do paciente, data de emissão, período de afastamento, assinatura e número de registro do profissional.</p>
+          <p class="lei">Base: Resolução CFM nº 1.658/2002.</p>
+          <p class="upd">Atualizado em setembro de 2026</p>
+        </article>
+
+        <article class="art">
+          <span class="art-tag">Direito do trabalho</span>
+          <h3>PJ no contrato, funcionário na prática</h3>
+          <p>A CLT define a relação de emprego por quatro elementos: pessoalidade, habitualidade, onerosidade e subordinação. Quando os quatro estão presentes, <strong>existe vínculo</strong> — independentemente do que o contrato assinado diz.</p>
+          <p>Sinais comuns: horário definido pela empresa, chefe a quem se reportar, metas e cobrança de desempenho, exclusividade de fato, uso de ferramentas e sistemas da empresa, e impossibilidade de se fazer substituir por outra pessoa.</p>
+          <p>Reconhecido o vínculo, passam a ser devidas as verbas de todo o período trabalhado: anotação na carteira, FGTS, férias com um terço, décimo terceiro, horas extras e aviso prévio.</p>
+          <p class="lei">Base: arts. 2º, 3º e 9º da CLT.</p>
+          <p class="upd">Atualizado em setembro de 2026</p>
+        </article>
+
+        <article class="art">
+          <span class="art-tag">Direito de família</span>
+          <h3>Pensão, guarda e convivência: o que a lei realmente exige</h3>
+          <p>A pensão alimentícia é direito <strong>do filho</strong>, não de quem recebe nem de quem paga. O valor é fixado pela necessidade de quem precisa e pela possibilidade de quem paga, e pode ser revisto sempre que qualquer um dos dois mudar.</p>
+          <p>Dinheiro e convivência são coisas separadas. Quem está atrasado com a pensão não perde, por isso, o direito de conviver com o filho; e quem paga em dia não compra, com isso, o direito de decidir sozinho sobre a vida da criança. A guarda compartilhada é a regra legal, e ela não significa divisão igual de dias.</p>
+          <p>Tanto o descumprimento da convivência combinada quanto o atraso no pagamento têm caminhos judiciais próprios — no caso dos alimentos, a execução pode chegar à prisão civil do devedor.</p>
+          <p class="lei">Base: arts. 1.583, 1.584 e 1.694 e seguintes do Código Civil; art. 528 do CPC.</p>
+          <p class="upd">Atualizado em setembro de 2026</p>
+        </article>
+
+        <article class="art">
+          <span class="art-tag">Saúde</span>
+          <h3>O plano negou o tratamento. E agora?</h3>
+          <p>O rol da ANS é a <strong>referência básica</strong> de cobertura, não o limite absoluto. Desde a Lei 14.454/2022, o plano é obrigado a cobrir tratamento que esteja fora do rol quando houver comprovação de eficácia baseada em evidências científicas e plano terapêutico, ou recomendação da CONITEC, ou recomendação de ao menos um órgão de avaliação de tecnologias em saúde de renome internacional.</p>
+          <p>Outro ponto que muita gente não sabe: <strong>a negativa tem que ser por escrito e fundamentada</strong>. Você pode exigir isso da operadora, e esse documento é a peça central de qualquer discussão posterior.</p>
+          <p>Vale lembrar também que quem escolhe o tratamento é o médico, não o plano. A operadora pode discutir cobertura contratual — não pode substituir a conduta clínica de quem acompanha o paciente.</p>
+          <p>Quando a negativa é indevida e agrava o quadro de saúde ou impõe sofrimento além do aborrecimento comum, além da obrigação de cobrir o tratamento pode haver indenização por dano moral.</p>
+          <p class="lei">Base: Lei nº 9.656/1998; Lei nº 14.454/2022; Código de Defesa do Consumidor, conforme a Súmula 608 do STJ.</p>
+          <p class="upd">Atualizado em setembro de 2026</p>
+        </article>
+
+        <article class="art">
+          <span class="art-tag">Saúde</span>
+          <h3>Carência, urgência e doença preexistente</h3>
+          <p>A lei fixa <strong>prazos máximos</strong> de carência, e nenhum contrato pode ir além deles:</p>
+          <ul>
+            <li>Urgência e emergência — 24 horas</li>
+            <li>Partos a termo — 300 dias</li>
+            <li>Demais casos — 180 dias</li>
+          </ul>
+          <p>Doença ou lesão preexistente é caso à parte: o plano pode aplicar cobertura parcial temporária, e ela dura <strong>no máximo 24 meses</strong>. Passado esse prazo, a cobertura é integral. E para haver restrição, a preexistência precisa estar declarada ou comprovada — a operadora não pode alegar depois, por conta própria, aquilo que não apurou na entrada.</p>
+          <p>Quem está trocando de plano também costuma não saber da portabilidade de carências: em certas condições, dá para migrar sem cumprir tudo de novo.</p>
+          <p class="lei">Base: arts. 11 e 12 da Lei nº 9.656/1998 e normas da ANS sobre portabilidade.</p>
+          <p class="upd">Atualizado em setembro de 2026</p>
+        </article>
+
+        <article class="art">
+          <span class="art-tag">Consumidor</span>
+          <h3>Cobrança indevida: quando a devolução é em dobro</h3>
+          <p>O Código de Defesa do Consumidor garante que quem foi cobrado em quantia indevida tem direito a receber <strong>o dobro do que pagou a mais</strong>, com correção e juros, salvo em caso de engano justificável.</p>
+          <p>Em 2021, o Superior Tribunal de Justiça firmou que essa devolução em dobro <strong>não depende de provar má-fé</strong> da empresa: basta a cobrança contrariar a boa-fé objetiva. A tese vale para as cobranças feitas a partir de 30 de março de 2021.</p>
+          <p>Uma ressalva importante e que evita frustração: a devolução em dobro pressupõe que você <strong>tenha pagado</strong>. Cobrança indevida que você não pagou não gera repetição em dobro — o que não impede a discussão de outros danos, conforme o caso.</p>
+          <p class="lei">Base: art. 42, parágrafo único, do Código de Defesa do Consumidor; STJ, EAREsp 676.608/RS.</p>
+          <p class="upd">Atualizado em setembro de 2026</p>
+        </article>
+
+        <article class="art">
+          <span class="art-tag">Consumidor</span>
+          <h3>Nome negativado sem aviso prévio</h3>
+          <p>Antes de inscrever alguém num cadastro de inadimplentes, o órgão que mantém o cadastro precisa <strong>comunicar o consumidor por escrito</strong>. É o que diz o Código de Defesa do Consumidor, e o Superior Tribunal de Justiça consolidou o entendimento na Súmula 359.</p>
+          <p>Descobrir a negativação só na hora de fazer uma compra é, portanto, sinal de que algo foi feito errado — e a inscrição pode ser cancelada por esse motivo.</p>
+          <p>Existe, porém, um limite que é honesto conhecer desde o começo: pela Súmula 385 do STJ, <strong>não cabe indenização por dano moral quando já existe outra negativação legítima</strong> no nome da pessoa. Nesse caso, o direito é ao cancelamento da inscrição irregular, mas não à indenização.</p>
+          <p>Outro ponto: a informação negativa não pode permanecer por mais de cinco anos.</p>
+          <p class="lei">Base: art. 43 e §§ do Código de Defesa do Consumidor; Súmulas 359 e 385 do STJ.</p>
+          <p class="upd">Atualizado em setembro de 2026</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE ============ -->
+  <section id="sobre">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Sobre</span>
+        <h2>Quem vai cuidar do seu caso</h2>
+      </div>
+      <div class="sobre">
+        <div class="foto">
+          <img src="foto-sobre.jpg" alt="Matheus Oliveira Silva" width="853" height="1280" loading="lazy">
+        </div>
+        <div class="sobre-txt">
+          <p>Sou Matheus Oliveira Silva, advogado inscrito na Ordem dos Advogados do Brasil, Seccional de São Paulo, sob o nº 550.010.</p>
+          <p>Atendo pessoas físicas em direito do trabalho, de família, médico e da saúde, do consumidor e cível. O atendimento é presencial em Barueri e online para o restante do país — e é feito diretamente comigo, do primeiro contato até o fim do processo.</p>
+          <p>Acredito que a maior parte da angústia de quem procura um advogado vem de não entender o que está acontecendo. Por isso explico cada etapa em português comum, e digo com franqueza quando um caso não tem o desfecho que a pessoa espera.</p>
+          <dl class="credenciais">
+            <div class="cred"><dt>Inscrição</dt><dd>OAB/SP 550.010</dd></div>
+            <div class="cred"><dt>Graduação</dt><dd>Direito — Universidade Nove de Julho</dd></div>
+            <div class="cred"><dt>Pós-graduação</dt><dd>Cursando Execução Civil e Trabalhista — Centro Universitário Arnaldo</dd></div>
+            <div class="cred"><dt>Atendimento</dt><dd>Presencial em Barueri/SP e online em todo o Brasil</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="duvidas">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Perguntas frequentes</span>
+        <h2>Dúvidas que aparecem sempre</h2>
+      </div>
+      <div class="faq">
+
+        <details>
+          <summary>Quanto tempo demora um processo trabalhista?</summary>
+          <div class="ans">Depende da vara, da complexidade do caso e de haver ou não acordo. Em geral a primeira audiência é marcada dentro de alguns meses, e os casos que terminam em acordo se encerram bem antes dos que vão até o julgamento e o recurso. Na análise inicial eu dou a estimativa realista do seu caso.</div>
+        </details>
+
+        <details>
+          <summary>Quais documentos eu preciso levar na primeira conversa?</summary>
+          <div class="ans">No trabalhista: carteira de trabalho, contracheques, contrato, mensagens trocadas com a chefia e o termo de rescisão, se houver. Na família: certidões, comprovantes de renda e de despesas. No cível: o contrato, os comprovantes de pagamento e as cobranças recebidas. Se estiver faltando alguma coisa, me procure mesmo assim — dá para começar com o que existe.</div>
+        </details>
+
+        <details>
+          <summary>Pedi demissão. Ainda posso entrar com ação?</summary>
+          <div class="ans">Pode. Pedir demissão não apaga verbas não pagas do período trabalhado, horas extras nem depósitos de FGTS em falta. E também não impede a discussão de rescisão indireta, quando o pedido de demissão foi motivado por falta grave da empresa.</div>
+        </details>
+
+        <details>
+          <summary>Posso me divorciar se a outra pessoa não concordar?</summary>
+          <div class="ans">Pode. O divórcio não depende do consentimento da outra parte nem de justificar o motivo. O que pode ser discutido em juízo são a partilha dos bens, a guarda dos filhos e os alimentos — e o divórcio pode ser decretado antes dessas questões estarem resolvidas.</div>
+        </details>
+
+        <details>
+          <summary>Quem paga pensão pode exigir prestação de contas?</summary>
+          <div class="ans">Como regra, quem recebe a pensão em nome do filho não tem o dever de apresentar recibo de cada gasto. Existe a possibilidade de quem paga buscar fiscalização judicial quando há indício concreto de desvio da finalidade — mas isso é diferente de cobrar prestação de contas do dia a dia.</div>
+        </details>
+
+        <details>
+          <summary>Meu plano de saúde negou um procedimento. O que eu faço primeiro?</summary>
+          <div class="ans">Peça a negativa por escrito, com o motivo — a operadora é obrigada a fornecer, e esse documento é a peça central de qualquer discussão depois. Guarde também o pedido e o relatório do médico que indicou o tratamento. Com esses três papéis em mãos, já dá para avaliar se a recusa tem base contratual ou não.</div>
+        </details>
+
+        <details>
+          <summary>Comprei pela internet e me arrependi. Posso devolver?</summary>
+          <div class="ans">Pode, dentro de sete dias contados do recebimento do produto, sem precisar justificar o motivo. É o direito de arrependimento do Código de Defesa do Consumidor, e vale para compras feitas fora da loja física — internet, telefone ou a domicílio. Os valores pagos devem ser devolvidos integralmente e de imediato, incluindo o frete.</div>
+        </details>
+
+        <details>
+          <summary>O atendimento online tem a mesma validade do presencial?</summary>
+          <div class="ans">Tem. Procuração, contrato e documentos podem ser assinados eletronicamente, e os processos já tramitam em meio digital. A diferença é apenas de conveniência: você escolhe o que for melhor para você.</div>
+        </details>
+
+        <details>
+          <summary>Você atende fora de Barueri?</summary>
+          <div class="ans">Sim. Presencialmente em Barueri e região, com hora marcada; online, em todo o Brasil.</div>
+        </details>
+
+        <details>
+          <summary>Como funciona a cobrança dos honorários?</summary>
+          <div class="ans">A proposta é feita por escrito, caso a caso, depois da análise dos documentos e antes de qualquer ato processual. Você só decide depois de saber exatamente o que está contratando.</div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATO ============ -->
+  <section id="contato">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Contato</span>
+        <h2>Vamos conversar sobre o seu caso</h2>
+        <p>A primeira conversa serve para entender a situação e dizer se existe caminho. Me chame pelo WhatsApp — é por onde respondo mais rápido.</p>
+      </div>
+      <div class="contato">
+        <div class="cbox">
+          <span class="lbl">WhatsApp e telefone</span>
+          <span class="val">(11) 93756-1549</span>
+          <span class="sm">Segunda a sexta, das 9h às 18h</span>
+        </div>
+        <div class="cbox">
+          <span class="lbl">E-mail</span>
+          <span class="val">oliveirasilvaadv.matheus@gmail.com</span>
+          <span class="sm">Resposta em até um dia útil</span>
+        </div>
+        <div class="cbox">
+          <span class="lbl">Atendimento</span>
+          <span class="val">Barueri/SP</span>
+          <span class="sm">Presencial com hora marcada, e online em todo o Brasil</span>
+        </div>
+      </div>
+      <div class="contato-cta">
+        <a class="btn btn-gold" href="https://wa.me/5511937561549?text=Prezado%20Dr.%20Matheus%2C%20cheguei%20at%C3%A9%20o%20senhor%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20atendimento%20para%20tratar%20do%20meu%20caso." target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.2.2-.6.2-1 .1-1.2 0-.1-.2-.2-.4-.3Z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <div class="foot-top">
+      <div class="foot-id">
+        <div class="lockup">
+          <span class="mark" aria-hidden="true"><span>MS</span></span>
+          <span class="nome-full">Matheus Oliveira Silva</span>
+          <span class="adv"><i aria-hidden="true"></i><span>Advocacia</span><i aria-hidden="true"></i></span>
+        </div>
+        <span class="oab">OAB/SP 550.010</span>
+      </div>
+      <nav class="foot-links" aria-label="Navegação do rodapé">
+        <a href="#areas">Áreas de atuação</a>
+        <a href="#atendimento">Como funciona</a>
+        <a href="#direitos">Seus direitos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+    <p class="aviso">
+      Este site tem caráter exclusivamente informativo, nos termos do Provimento nº 205/2021 do Conselho Federal da OAB. O conteúdo publicado não constitui consulta jurídica, não configura oferta de serviços e não substitui a análise de um caso concreto por profissional habilitado. Nenhuma informação aqui publicada garante resultado.
+      <br><br>
+      © 2026 Matheus Oliveira Silva — OAB/SP 550.010. Barueri/SP.
+    </p>
+  </div>
+</footer>
+
+<div class="zap-bar">
+  <a class="btn btn-gold" href="https://wa.me/5511937561549?text=Prezado%20Dr.%20Matheus%2C%20cheguei%20at%C3%A9%20o%20senhor%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20atendimento%20para%20tratar%20do%20meu%20caso." target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.2.2-.6.2-1 .1-1.2 0-.1-.2-.2-.4-.3Z"/></svg>
+    Falar no WhatsApp
+  </a>
+</div>
+
+</body>
+</html>
